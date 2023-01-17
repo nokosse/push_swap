@@ -1,45 +1,28 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/17 18:20:21 by kvisouth          #+#    #+#              #
-#    Updated: 2023/01/17 19:05:21 by kvisouth         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SOURCES = src/check_args.c src/check_args2.c
-OBJECTS = $(SOURCES:src/%.c=obj/%.o)
-
-EXEC = push_swap
-
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Ilibft/inc
-
+NAME = push_swap
+SRCS = $(wildcard src/*.c) main.c
+OBJS = $(SRCS:.c=.o)
+HEADERS = inc/push_swap.h
 LIBFT = libft/libft.a
+CFLAGS = -Wall -Wextra -Werror
+CC = gcc
 
-all: $(EXEC)
+all: $(NAME)
 
-$(EXEC): $(OBJECTS) $(LIBFT)
-	$(CC) $(OBJECTS) $(LIBFT) -o $(EXEC)
+$(NAME): $(OBJS) $(HEADERS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT)
 
-$(OBJECTS): obj/%.o : src/%.c
-	mkdir -p obj/
+%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBFT):
-	make -C libft/
+	make -C libft
 
 clean:
-	make -C libft/ clean
-	rm -f $(OBJECTS)
+	rm -f $(OBJS)
+	make -C libft clean
 
 fclean: clean
-	make -C libft/ fclean
-	rm -f $(EXEC)
+	rm -f $(NAME)
+	make -C libft fclean
 
 re: fclean all
-
-.PHONY: all clean fclean re
