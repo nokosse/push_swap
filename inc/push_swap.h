@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/16 16:45:23 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:57:22 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,15 @@
 # include <fcntl.h>
 # include "../libft/inc/libft.h"
 # include "../libft/inc/ft_printf.h"
+
+// Arguments validity check
+int	dupe_check_args(char **av);
+int	dupe_check_str(char *str);
+int is_number(char *str);
+int	is_array_numeric(char *str);
+int are_args_numeric(int ac, char **av);
+int	check_args(int ac, char **av);
+
+
 
 #endif
