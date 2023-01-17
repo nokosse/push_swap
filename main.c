@@ -6,13 +6,11 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 00:26:54 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/18 00:28:00 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/push_swap.h"
-#include "libft/inc/libft.h"
-#include "libft/inc/ft_printf.h"
 
 int main (int ac, char **av)
 {
