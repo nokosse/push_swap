@@ -6,7 +6,7 @@
 #    By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 17:26:39 by kvisouth          #+#    #+#              #
-#    Updated: 2023/01/13 19:45:59 by kvisouth         ###   ########.fr        #
+#    Updated: 2023/01/18 00:32:55 by kvisouth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,8 @@ AR	 = ar rcs
 
 all:
 	@echo -n "\n Compiling 0/$(words $(SRCS)) files"
-	@$(MAKE) $(NAME) | awk '{if(NR%2==1){printf "\033[31m\rCompiling %d/%d files\033[0m", NR, $(words $(SRCS))}} END {printf "\033[32m\rCompiling %d/%d files\033[0m\n", NR, NR}'
-	@echo "\033[32m>>>>>>> Done <<<<<<<<\n\033[0m"
+	@$(MAKE) $(NAME) | awk '{if(NR%2==1){printf "\033[31m\rCompiling %d/%d files\033[0m", NR, $(words $(SRCS))}} END {printf "\033[32m\rCompiled %d/%d files in libft\033[0m\n", NR, NR}'
+	@echo "\033[32m>>>>>>>>>>>> Done <<<<<<<<<<<<\n\033[0m"
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
