@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 17:29:09 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:40:33 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	dupe_check_str(char *str)
 int	is_number_bigger_than_max_int(char **av)
 {
 	int	i;
-	
+
 	i = 0;
 	while (av[i])
 	{
