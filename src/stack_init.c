@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 17:40:03 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 19:30:42 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/18 19:42:27 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,16 +69,7 @@ int	*av_to_int_array(char **av)
 }
 
 //Function that takes a int *numbers and put all the numbers in a t_list
-// Prototype of the t_list struct :
-// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-// t_list	*ft_lstnew(void *content);
-// t_list	*ft_lstlast(t_list *lst);
-// void	ft_lstadd_front(t_list **lst, t_list *new);
-// int		ft_lstsize(t_list *lst);
-// void	ft_lstadd_back(t_list **lst, t_list *new);
-// void	ft_lstdelone(t_list *lst, void (*del)(void*));
-// void	ft_lstclear(t_list **lst, void (*del)(void*));
-// void	ft_lstiter(t_list *lst, void (*f)(void *));
+//It's appending the numbers to the end of the list from the beginning.
 void	stack_init(int *numbers, t_list **stack_a)
 {
 	int	i;
