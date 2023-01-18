@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 17:40:03 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 19:42:27 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/18 20:02:12 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,21 +49,32 @@ int	*str_to_int_array(char *str)
 	return (numbers);
 }
 
-//Function that convert an char **str of numbers to an array of int
-int	*av_to_int_array(char **av)
+//Function that takes a **argv of numbers and convert it to an array of int
+int	*av_to_int_array(int ac, char **av)
 {
 	int	*numbers;
 	int	i;
 	int	j;
+	int	k;
 
 	i = 1;
 	j = 0;
-	numbers = (int *)malloc(sizeof(int) * (ft_strlen(av[1]) + 1));
-	while (av[i])
+	k = 0;
+	numbers = (int *)malloc(sizeof(int) * ac);
+	while (i < ac)
 	{
-		numbers[j] = ft_atoi(av[i]);
+		if (av[i][0] == ' ')
+		{
+			numbers[j] = ft_atoi(&av[i][k]);
+			j++;
+			k = 0;
+		}
+		else
+		{
+			numbers[j] = ft_atoi(&av[i][k]);
+			j++;
+		}
 		i++;
-		j++;
 	}
 	return (numbers);
 }

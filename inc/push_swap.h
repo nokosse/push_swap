@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 19:44:04 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/18 19:58:15 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		is_number_bigger_than_max_int_str(char *str);
 // Put args in list
 int		ft_intlen(int *numbers);
 int		*str_to_int_array(char *str);
-int		*av_to_int_array(char **str);
+int	*av_to_int_array(int ac, char **av);
 void	stack_init(int *numbers, t_list **stack_a);
 
 #endif
