@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/17 17:57:34 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:15:23 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,18 @@ int	check_args(int ac, char **av)
 	if (ac == 2 && is_array_numeric(av[1]) == 1)
 	{
 		if (dupe_check_str(av[1]) == 1)
-			return (1);
+		{
+			if (is_number_bigger_than_max_int_str(av[1]) == 1)
+				return (1);
+		}
 	}
 	else if (ac > 2 && are_args_numeric(ac, av) == 1)
 	{
 		if (dupe_check_args(av) == 1)
-			return (1);
+		{
+			if (is_number_bigger_than_max_int(av) == 1)
+				return (1);
+		}
 	}
 	return (0);
 }
