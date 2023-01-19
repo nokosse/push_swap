@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 20:02:25 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:18:54 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	main(int ac, char **av)
 {
 	int	*numbers;
 	t_list	*stack_a;
-	// t_list	*stack_b;
+	t_list	*stack_b;
 
 	stack_a = NULL;
-	// stack_b = NULL;
+	stack_b = NULL;
 	if (ac == 1)
 		return (0);
 	else if (check_args(ac, av) == 0)
@@ -47,5 +47,8 @@ int	main(int ac, char **av)
 	// 	ft_printf("numbers = %d\n", numbers[i++]);
 	
 	stack_init(numbers, &stack_a);
+	sort_pa(&stack_a, &stack_b);
+
 	ft_print_lst(stack_a);
+	ft_print_lst(stack_b);
 }
