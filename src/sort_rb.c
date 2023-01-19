@@ -6,9 +6,11 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:17:06 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/19 12:27:18 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:37:37 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../inc/push_swap.h"
 
 // rb (rotate b) : Décale d’une position vers le haut tous les élements de la pile b.
 // Le premier élément devient le dernier.

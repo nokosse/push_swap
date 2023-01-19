@@ -6,9 +6,11 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:15:30 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/19 12:29:36 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:37:13 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../inc/push_swap.h"
 
 // ss : sa et sb en même temps.
 //
