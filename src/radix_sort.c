@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:34:30 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/19 13:10:33 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/20 12:50:35 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 // 	struct s_list	*next;
 // }	t_list;
 
-//This function sorts the stack_a if the size of the stack_a > 5 using radix sort
+//This function sorts the stack_a using radix sort, only if len stack_a > 5
 void	radix_sort(t_list **stack_a, t_list **stack_b)
 {
 	(void)stack_a;

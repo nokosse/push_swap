@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:15:48 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/19 13:11:43 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/20 12:46:47 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@
 // A | B        A | B
 
 //This function reproduce the pa instruction. Stack_b can be empty.
-void    sort_pa(t_list **stack_a, t_list **stack_b)
+void	sort_pa(t_list **stack_a, t_list **stack_b)
 {
-    t_list  *tmp;
+	t_list	*tmp;
 
-    if (*stack_b)
-    {
-        tmp = *stack_b;
-        *stack_b = (*stack_b)->next;
-        tmp->next = *stack_a;
-        *stack_a = tmp;
-    }
+	if (*stack_b)
+	{
+		tmp = *stack_b;
+		*stack_b = (*stack_b)->next;
+		tmp->next = *stack_a;
+		*stack_a = tmp;
+	}
 }
