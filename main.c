@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 16:38:52 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/23 17:19:20 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	main(int ac, char **av)
 	{
 		if (ft_lstsize(stack_a) == 2)
 			sort_sa(&stack_a, &stack_b);
+		else if (ft_lstsize(stack_a) == 3)
+			algo_3(&*stack_a, &*stack_b);
 		else
 			bogo_sort(&stack_a, &stack_b);
 	}
@@ -56,3 +58,5 @@ int	main(int ac, char **av)
 	ft_printf("\n");
 	ft_print_lst(stack_a);
 }
+		// else if (ft_lstsize(stack_a) == 3)
+		// 	algo_3(&stack_a, &stack_b);
