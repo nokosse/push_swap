@@ -6,18 +6,58 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:49 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 18:15:07 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/23 18:34:49 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// This function will sort the stack_a if it has 2 elements.
-// It uses sort_sa() if the first element is bigger than the second one.
-void	algo_2(t_list *stack_a)
+// Split the case 2 of algo_3() into a function for norms (Line too long)
+int	algo_3_case_2(t_list *stack_a, t_list *stack_b)
 {
-	if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content))
-		sort_sa(&stack_a, NULL);
+	(void)(stack_b);
+	if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content) &&
+		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content) &&
+		*(int *)(stack_a->next->content) >
+		*(int *)(stack_a->next->next->content))
+		return (1);
+	return (0);
+}
+
+// Split the case 3 of algo_3() into a function for norms (Line too long)
+int	algo_3_case_3(t_list *stack_a, t_list *stack_b)
+{
+	(void)(stack_b);
+	if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
+		*(int *)(stack_a->next->content) >
+		*(int *)(stack_a->next->next->content) &&
+		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content))
+		return (1);
+	return (0);
+}
+
+// Split the case 4 of algo_3() into a function for norms (Line too long)
+int	algo_3_case_4(t_list *stack_a, t_list *stack_b)
+{
+	(void)(stack_b);
+	if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
+		*(int *)(stack_a->next->content) >
+		*(int *)(stack_a->next->next->content) &&
+		*(int *)(stack_a->content) < *(int *)(stack_a->next->next->content))
+		return (1);
+	return (0);
+}
+
+// Split the case 5 of algo_3() into a function for norms (Line too long)
+int	algo_3_case_5(t_list *stack_a, t_list *stack_b)
+{
+	(void)(stack_b);
+	if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
+		*(int *)(stack_a->next->content) <
+		*(int *)(stack_a->next->next->content) &&
+		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content))
+		return (1);
+	return (0);
 }
 
 // This function will sort the stack_a if it has 3 elements.
@@ -27,25 +67,18 @@ void	algo_3(t_list *stack_a, t_list *stack_b)
 	if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content) &&
 		*(int *)(stack_a->content) < *(int *)(stack_a->next->next->content))
 		sort_sa(&stack_a, &stack_b);
-	else if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content) &&
-		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content) &&
-		*(int *)(stack_a->next->content) > *(int *)(stack_a->next->next->content))
+	else if (algo_3_case_2(stack_a, stack_b) == 1)
 	{
 		sort_sa(&stack_a, &stack_b);
 		sort_rra(&stack_a, &stack_b);
 	}
-	else if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content) &&
-		*(int *)(stack_a->next->content) < *(int *)(stack_a->next->next->content))
+	else if (algo_3_case_3(stack_a, stack_b) == 1)
 		sort_ra(&stack_a, &stack_b);
-	else if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
-		*(int *)(stack_a->next->content) > *(int *)(stack_a->next->next->content) &&
-		*(int *)(stack_a->content) < *(int *)(stack_a->next->next->content))
+	else if (algo_3_case_4(stack_a, stack_b) == 1)
 	{
 		sort_sa(&stack_a, &stack_b);
 		sort_ra(&stack_a, &stack_b);
 	}
-	else if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
-		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content) &&
-		*(int *)(stack_a->next->content) > *(int *)(stack_a->next->next->content))
+	else if (algo_3_case_5(stack_a, stack_b) == 1)
 		sort_rra(&stack_a, &stack_b);
 }
