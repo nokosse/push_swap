@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/20 13:03:58 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/23 15:46:13 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,30 +40,12 @@ int	main(int ac, char **av)
 		numbers = str_to_int_array(av[1]);
 	else if (ac > 2)
 		numbers = av_to_int_array(ac, av);
-	// free(numbers);
-
-	//print numbers
-	// int i = 0;
-	// while (numbers[i])
-	// 	ft_printf("numbers = %d\n", numbers[i++]);
-	
 	stack_init(numbers, &stack_a);
-
-	ft_printf("Avant tri\n");
-	ft_printf("stack_a\n");
+	bogo_sort(&stack_a, &stack_b);
+	// if (is_stack_a_sorted(stack_a, stack_b) == 1)
+	// 	ft_printf("OK\n");
+	// else
+	// 	ft_printf("KO\n");
+	ft_printf("\n");
 	ft_print_lst(stack_a);
-	ft_printf("stack_b\n");
-	ft_print_lst(stack_b);
-	ft_printf("\n\n");
-
-	sort_pb(&stack_a, &stack_b);
-	sort_pb(&stack_a, &stack_b);
-	sort_pb(&stack_a, &stack_b);
-	sort_ss(&stack_a, &stack_b);
-
-	ft_printf("Apres tri\n");
-	ft_printf("stack_a\n");
-	ft_print_lst(stack_a);
-	ft_printf("stack_b\n");
-	ft_print_lst(stack_b);
 }

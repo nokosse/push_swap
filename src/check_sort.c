@@ -6,26 +6,30 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:34:48 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/20 12:51:11 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/23 15:49:01 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-//This function checks if the stack is sorted in ascending order
-int	is_stack_a_sorted(t_list *stack)
+// This function return 1 if :
+// - stack_a is sorted in ascending order.
+// - stack_b is empty.
+// Otherwise, it returns 0.
+int	is_stack_a_sorted(t_list *stack_a, t_list *stack_b)
 {
-	int	*current;
-	int	*next;
+	t_list	*current;
 
-	current = stack->content;
-	while (stack->next)
+	current = stack_a;
+	if (stack_b)
+		return (0);
+	if (!stack_a || !stack_a->next)
+		return (1);
+	while (current->next)
 	{
-		next = stack->next->content;
-		if (*current > *next)
+		if (*(int *)(current->content) > *(int *)(current->next->content))
 			return (0);
-		current = next;
-		stack = stack->next;
+		current = current->next;
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:13:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/20 13:01:29 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/23 15:37:02 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ void	sort_sa(t_list **stack_a, t_list **stack_b)
 		tmp->next = *stack_a;
 		*stack_a = tmp;
 	}
+	ft_printf("sa\n");
 }
