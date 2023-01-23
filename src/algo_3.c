@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:49 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 16:15:38 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:40:57 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,7 @@ void    algo_2(t_list *stack_a)
 
 // This function will sort the stack_a if it has 3 elements.
 // It must not have more than 3 sorting operations.
+void	algo_3(t_list *stack_a, t_list *stack_b)
+{
+	
+}
