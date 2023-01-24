@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/24 12:59:44 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:00:59 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ void	algo_5(t_list *stack_a, t_list *stack_b)
 
 	i = 0;
 	j = 0;
-	else if (ft_lstsize(stack_a) == 5)
-	{
-		sort_pb(&stack_a, &stack_b);
-		sort_pb(&stack_a, &stack_b);
-	}
+	sort_pb(&stack_a, &stack_b);
+	sort_pb(&stack_a, &stack_b);
 	if (!is_stack_a_sorted_no_b(stack_a))
 		algo_3(&*stack_a, &*stack_b);
 	while (stack_b)
