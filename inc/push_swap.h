@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/24 12:17:14 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:24:24 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ void	sort_rra(t_list **stack_a);
 // Sorting algorithms & verification
 int		is_stack_a_sorted(t_list *stack_a, t_list *stack_b);
 int     is_stack_a_sorted_no_b(t_list *stack_a);
-void	algo_2_a(t_list *stack_a);
-void	algo_2_b(t_list *stack_b);
 void	algo_3(t_list *stack_a, t_list *stack_b);
 void	algo_5(t_list *stack_a, t_list *stack_b);
 
