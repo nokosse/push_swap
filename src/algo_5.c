@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/24 13:17:29 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:22:30 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // If we have 4 element, do sort_pb one time, two time if we have 5 elements.
 // Then run algo_3() on stack_a if it's not sorted.
 // We need to push the last two or less elements on stack_b to stack_a.
-// We have to find the correct position on stack_a before runnung sort_pa() operation
+// We have to find the correct position on stack_a before runnung sort_pa()
 // For each element of stack_b (which is 2 or 1).
 void	algo_5(t_list *stack_a, t_list *stack_b)
 {
