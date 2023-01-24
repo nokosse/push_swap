@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:49 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 18:34:49 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:47:42 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	algo_3_case_2(t_list *stack_a, t_list *stack_b)
 int	algo_3_case_3(t_list *stack_a, t_list *stack_b)
 {
 	(void)(stack_b);
-	if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
-		*(int *)(stack_a->next->content) >
+	if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content) &&
+		*(int *)(stack_a->next->content) <
 		*(int *)(stack_a->next->next->content) &&
 		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content))
 		return (1);
@@ -52,10 +52,12 @@ int	algo_3_case_4(t_list *stack_a, t_list *stack_b)
 int	algo_3_case_5(t_list *stack_a, t_list *stack_b)
 {
 	(void)(stack_b);
-	if (*(int *)(stack_a->content) < *(int *)(stack_a->next->content) &&
-		*(int *)(stack_a->next->content) <
+	if (*(int *)(stack_a->content) <
+		*(int *)(stack_a->next->content) &&
+		*(int *)(stack_a->next->content) >
 		*(int *)(stack_a->next->next->content) &&
-		*(int *)(stack_a->content) > *(int *)(stack_a->next->next->content))
+		*(int *)(stack_a->content) >
+		*(int *)(stack_a->next->next->content))
 		return (1);
 	return (0);
 }
