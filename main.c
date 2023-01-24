@@ -6,24 +6,19 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 20:25:02 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:56:58 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/push_swap.h"
 
-// Function that print the list content from the first element to the last.
-// It has to reset the list to the first element before printing because
-// the list is modified during the sorting process.
-void    ft_print_lst(t_list *lst)
+//Function ft_print_lst : print the content of stack_a.
+void	ft_print_lst(t_list *stack_a)
 {
-	t_list  *temp;
-
-	temp = lst;
-	while (temp != NULL)
+	while (stack_a)
 	{
-		ft_printf("%d ", *(int *)(temp->content));
-		temp = temp->next;
+		ft_printf("%d\n", *(int *)(stack_a->content));
+		stack_a = stack_a->next;
 	}
 }
 
@@ -48,18 +43,16 @@ int	main(int ac, char **av)
 	if (is_stack_a_sorted(stack_a, stack_b) == 0)
 	{
 		if (ft_lstsize(stack_a) == 2)
-			sort_sa(&stack_a, &stack_b);
+			sort_sa(&stack_a);
 		else if (ft_lstsize(stack_a) == 3)
 			algo_3(&*stack_a, &*stack_b);
 		else if (ft_lstsize(stack_a) == 5)
-		//TODO : Fix for 2, 4 and 5
-		else
-			bogo_sort(&stack_a, &stack_b);
+			algo_5(&*stack_a, &*stack_b);
 	}
 	if (is_stack_a_sorted(stack_a, stack_b) == 1)
-		ft_printf("OK\n");
+		ft_printf("\nOK\n");
 	else
-		ft_printf("KO\n");
-	// ft_printf("\n");
-	// ft_print_lst(stack_a);
+		ft_printf("\nKO\n");
+	ft_printf("\n");
+	ft_print_lst(stack_a);
 }

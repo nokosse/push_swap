@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:34:48 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 15:49:01 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 12:59:53 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,24 @@ int	is_stack_a_sorted(t_list *stack_a, t_list *stack_b)
 	current = stack_a;
 	if (stack_b)
 		return (0);
+	if (!stack_a || !stack_a->next)
+		return (1);
+	while (current->next)
+	{
+		if (*(int *)(current->content) > *(int *)(current->next->content))
+			return (0);
+		current = current->next;
+	}
+	return (1);
+}
+
+// This function act similarly to is_stack_a_sorted()
+// This one does not check if stack_b is empty.
+int	is_stack_a_sorted_no_b(t_list *stack_a)
+{
+	t_list	*current;
+
+	current = stack_a;
 	if (!stack_a || !stack_a->next)
 		return (1);
 	while (current->next)
