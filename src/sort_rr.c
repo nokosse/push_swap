@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:17:35 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 15:37:01 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:54:55 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 void	sort_rr(t_list **stack_a, t_list **stack_b)
 {
-	sort_ra(stack_a, stack_b);
-	sort_rb(stack_a, stack_b);
+	sort_ra(stack_a);
+	sort_rb(stack_b);
 	ft_printf("rr\n");
 }

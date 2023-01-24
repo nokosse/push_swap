@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:49 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/24 11:47:42 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:53:38 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,19 +68,19 @@ void	algo_3(t_list *stack_a, t_list *stack_b)
 {
 	if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content) &&
 		*(int *)(stack_a->content) < *(int *)(stack_a->next->next->content))
-		sort_sa(&stack_a, &stack_b);
+		sort_sa(&stack_a);
 	else if (algo_3_case_2(stack_a, stack_b) == 1)
 	{
-		sort_sa(&stack_a, &stack_b);
-		sort_rra(&stack_a, &stack_b);
+		sort_sa(&stack_a);
+		sort_rra(&stack_a);
 	}
 	else if (algo_3_case_3(stack_a, stack_b) == 1)
-		sort_ra(&stack_a, &stack_b);
+		sort_ra(&stack_a);
 	else if (algo_3_case_4(stack_a, stack_b) == 1)
 	{
-		sort_sa(&stack_a, &stack_b);
-		sort_ra(&stack_a, &stack_b);
+		sort_sa(&stack_a);
+		sort_ra(&stack_a);
 	}
 	else if (algo_3_case_5(stack_a, stack_b) == 1)
-		sort_rra(&stack_a, &stack_b);
+		sort_rra(&stack_a);
 }

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:13:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 16:16:07 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:50:59 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@
 //---|---      ---|---
 // A | B        A | B
 
-void	sort_sa(t_list **stack_a, t_list **stack_b)
+void	sort_sa(t_list **stack_a)
 {
 	t_list	*tmp;
 
-	(void)stack_b;
 	if (*stack_a && (*stack_a)->next)
 	{
 		tmp = (*stack_a)->next;

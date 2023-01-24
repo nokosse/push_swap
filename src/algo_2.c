@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:35:46 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 20:21:57 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:58:20 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 void	algo_2_a(t_list *stack_a)
 {
 	if (*(int *)(stack_a->content) > *(int *)(stack_a->next->content))
-		sort_sa(&stack_a, NULL);
+		sort_sa(&stack_a);
 }
 
 // Same but for stack_b.
 void	algo_2_b(t_list *stack_b)
 {
 	if (*(int *)(stack_b->content) < *(int *)(stack_b->next->content))
-		sort_sb(&stack_b, NULL);
+		sort_sb(&stack_b);
 }
