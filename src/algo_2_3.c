@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:13:39 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 18:49:18 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:06:46 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 //
 // Why the cast ? Because the content of the list is a void pointer.
 // And we need to compare the values of the elements. So we need to cast
-void	algo_2(t_list **a)
+void	algo_2(t_list **stack_a)
 {
 	int	elem1;
 	int	elem2;
 
-	elem1 = *(int *)(*a)->content;
-	elem2 = *(int *)(*a)->next->content;
+	elem1 = *(int *)(*stack_a)->content;
+	elem2 = *(int *)(*stack_a)->next->content;
 	if (elem1 > elem2)
-		sa(&*a);
+		sa(&*stack_a);
 	return ;
 }
 

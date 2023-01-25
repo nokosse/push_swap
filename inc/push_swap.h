@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 18:51:44 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:29:17 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@
 # include <fcntl.h>
 # include "../libft/inc/libft.h"
 # include "../libft/inc/ft_printf.h"
+
+typedef struct s_stack
+{
+	int				*content;
+	int				index;
+	struct s_stack  *next;
+}   t_stack;
 
 //Extra
 void	ft_print_lst(t_list *lst);
@@ -61,7 +68,7 @@ int		is_stack_a_sorted(t_list *stack_a, t_list *stack_b);
 int		is_stack_a_sorted_no_b(t_list *stack_a);
 void	algo_2(t_list **stack_a);
 void	algo_3(t_list **stack_a);
-void	algo_4(t_list *stack_a, t_list *stack_b);
-void	algo_5(t_list *stack_a, t_list *stack_b);
+void	algo_4(t_list **stack_a, t_list **stack_b);
+void	algo_5(t_list **stack_a, t_list **stack_b);
 
 #endif

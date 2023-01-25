@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 18:56:01 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:12:39 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,7 @@ int	main(int ac, char **av)
 	ft_printf("\nstack_a : ");
 	ft_print_lst(stack_a);
 }
+
+//TODO : Edit all the code to use the new structure t_stack
+//TODO : Sort 4 and 5
+//TODO : Edit check_args to accept negative numbers
