@@ -6,13 +6,13 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 14:28:55 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:29:01 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:39:20 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// rr : ra et rb en même temps.
+// Do both ra and rb at the same time.
 //
 // 1 | 5        2 | 6
 // 2 | 6   rr   3 | 7

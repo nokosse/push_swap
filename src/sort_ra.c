@@ -6,14 +6,15 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:16:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:27:11 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:38:50 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// ra : Décale d'1 position vers le haut tous les élements de la pile a.
-// Le premier élément devient le dernier.
+// Takes the first element of stack_a and put it at the end of the stack.
+// The first element becomes the last one.
+// All the other elements are shifted up by one.
 //
 // 1 |          2 |
 // 2 |     ra   3 |

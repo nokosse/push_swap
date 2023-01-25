@@ -6,14 +6,13 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:17:06 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:30:29 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:39:08 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// rb : Décale d'1 position vers le haut tous les élements de la pile b
-// Le premier élément devient le dernier.
+// Same as ra but on stack_b.
 //
 //   | 1          | 2
 //   | 2   rb     | 3 

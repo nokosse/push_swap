@@ -6,14 +6,14 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:16:17 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:26:41 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:37:46 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// pb (push b) : Prend le premier élément au sommet de a et le met sur b.
-// Ne fait rien si a est vide.
+// Takes the first element of stack_a and put it at the first position of
+// stack_b. It becomes the new first element of stack_b.
 //
 //   |            |
 //   |     pb     | 3

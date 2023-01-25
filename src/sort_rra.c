@@ -6,14 +6,15 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:44:12 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:30:22 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:40:03 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// rra (reverse rotate a) : Décale d’une position vers le bas tous les 
-// élements de la pile a. Le dernier élément devient le premier.
+// Takes the last element of stack_a and put it at the first position of
+// stack_a. It becomes the new first element of stack_a.
+// All other elements are shifted down by one.
 //
 // 1 |          4 |  
 // 2 |     rra  1 |  

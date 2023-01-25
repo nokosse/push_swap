@@ -6,15 +6,14 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:15:48 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:35:46 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:37:07 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// pa (push a) : Prend le premier élément au sommet de b et le met sur a.
-// Ne fait rien si b est vide.
-//
+// Takes the first element of stack_b and put it at the first position of
+// stack_a. It becomes the new first element of stack_a.
 //   |            |
 //   |     pa   1 |
 // 3 | 1   -->  3 |
@@ -22,9 +21,6 @@
 //---|---      ---|---
 // A | B        A | B
 
-// This function reproduce the pa instruction.
-// Takes the first element of stack_b and put it at the first position of
-// stack_a. It becomes the new first element of stack_a.
 void	pa(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;

@@ -6,14 +6,13 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:13:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:30:17 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:40:31 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// sa (swap a) : Intervertit les 2 premiers éléments au sommet de la pile a.
-// Ne fait rien s’il n’y en a qu’un ou aucun.
+// Swap the first 2 elements at the top of stack_a.
 //
 // 1 |          2 |
 // 2 |     sa   1 |
