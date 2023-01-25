@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 17:40:03 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 20:02:12 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:03:25 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	*av_to_int_array(int ac, char **av)
 	return (numbers);
 }
 
-//Function that takes a int *numbers and put all the numbers in a t_list
+//Function that takes a int array and put all the numbers in a t_list
 //It's appending the numbers to the end of the list from the beginning.
 void	stack_init(int *numbers, t_list **stack_a)
 {

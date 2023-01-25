@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:15:48 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/23 15:36:56 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:26:21 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@
 //---|---      ---|---
 // A | B        A | B
 
-//This function reproduce the pa instruction. Stack_b can be empty.
-void	sort_pa(t_list **stack_a, t_list **stack_b)
+// This function reproduce the pa instruction.
+// Takes the first element of stack_b and put it at the first position of
+// stack_a. It becomes the new first element of stack_a.
+void	pa(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;
 

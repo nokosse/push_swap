@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/24 13:24:24 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:25:49 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,15 @@ int		*av_to_int_array(int ac, char **av);
 void	stack_init(int *numbers, t_list **stack_a);
 
 // Sorting instructions
-void	sort_pa(t_list **stack_a, t_list **stack_b);
-void	sort_pb(t_list **stack_a, t_list **stack_b);
-void	sort_ra(t_list **stack_a);
-void	sort_rb(t_list **stack_b);
-void	sort_rr(t_list **stack_a, t_list **stack_b);
-void	sort_sa(t_list **stack_a);
-void	sort_sb(t_list **stack_b);
-void	sort_ss(t_list **stack_a, t_list **stack_b);
-void	sort_rra(t_list **stack_a);
+void	pa(t_list **stack_a, t_list **stack_b);
+void	pb(t_list **stack_a, t_list **stack_b);
+void	ra(t_list **stack_a);
+void	rb(t_list **stack_b);
+void	rr(t_list **stack_a, t_list **stack_b);
+void	sa(t_list **stack_a);
+void	sb(t_list **stack_b);
+void	ss(t_list **stack_a, t_list **stack_b);
+void	rra(t_list **stack_a);
 
 // Sorting algorithms & verification
 int		is_stack_a_sorted(t_list *stack_a, t_list *stack_b);

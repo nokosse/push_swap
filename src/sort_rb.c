@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:17:06 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/24 11:51:08 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 14:30:29 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 //---|---      ---|---
 // A | B        A | B
 
-void	sort_rb(t_list **stack_b)
+void	rb(t_list **stack_b)
 {
 	t_list	*tmp;
 	t_list	*tmp2;

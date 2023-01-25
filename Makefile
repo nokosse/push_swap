@@ -6,7 +6,7 @@
 #    By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 00:21:21 by kvisouth          #+#    #+#              #
-#    Updated: 2023/01/18 16:59:40 by kvisouth         ###   ########.fr        #
+#    Updated: 2023/01/25 14:41:34 by kvisouth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,12 @@ $(LIBFT):
 	make -C libft
 
 clean:
-	rm -rf obj
-	make -C libft clean
+	@rm -rf obj 2> /dev/null
+	@make -C libft clean > /dev/null 2>&1
 
 fclean: clean
-	rm -f $(NAME)
-	make -C libft fclean
+	@echo "\033[32m\nDeleting files\n\033[0m"
+	@rm -f $(NAME) 2> /dev/null
+	@make -C libft fclean > /dev/null 2>&1
 
 re: fclean all

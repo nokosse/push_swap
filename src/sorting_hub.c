@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_rr.c                                          :+:      :+:    :+:   */
+/*   sorting_hub.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 14:28:55 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 14:29:01 by kvisouth         ###   ########.fr       */
+/*   Created: 2023/01/25 15:00:26 by kvisouth          #+#    #+#             */
+/*   Updated: 2023/01/25 15:04:46 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// rr : ra et rb en même temps.
+// Function sorting_hub is called only if stack_a is not sorted.
+// No need to check if stack_a is sorted or not.
 //
-// 1 | 5        2 | 6
-// 2 | 6   rr   3 | 7
-// 3 | 7   -->  4 | 8
-// 4 | 8        1 | 5
-//---|---      ---|---
-// A | B        A | B
-
-void	rr(t_list **stack_a, t_list **stack_b)
+// This function will call the sorting algorithm depending on the number of
+// elements in stack_a.
+void	sorting_hub(t_list stack_a, t_list stack_b, int params)
 {
-	ra(stack_a);
-	rb(stack_b);
-	ft_printf("rr\n");
+	if (params == 2)
+	
 }
