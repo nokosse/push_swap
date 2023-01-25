@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:13:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:40:31 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 18:56:51 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
 //---|---      ---|---
 // A | B        A | B
 
+// before sa :
+// elem1 --> elem2.
+// after sa :
+// elem2 --> elem1.
 void	sa(t_list **stack_a)
 {
 	t_list	*tmp;
@@ -32,5 +36,5 @@ void	sa(t_list **stack_a)
 		tmp->next = *stack_a;
 		*stack_a = tmp;
 	}
-	ft_printf("sa\n");
+	write(1, "sa\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:13:39 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:35:49 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 18:49:18 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,19 @@
 // Function algo_2 is called only if stack_a has 2 elements.
 // If elem1 > elem2, swap them.
 // Else, it means it's already sorted.
-void	algo_2(t_list *a)
+//
+// Why the cast ? Because the content of the list is a void pointer.
+// And we need to compare the values of the elements. So we need to cast
+void	algo_2(t_list **a)
 {
-	if (a->content > a->next->content)
-		sa(&a);
+	int	elem1;
+	int	elem2;
+
+	elem1 = *(int *)(*a)->content;
+	elem2 = *(int *)(*a)->next->content;
+	if (elem1 > elem2)
+		sa(&*a);
+	return ;
 }
 
 // Function algo_3 is called only if stack_a has 3 elements.
@@ -28,29 +37,29 @@ void	algo_2(t_list *a)
 // 3. elem2 < elem3 < elem1 --> ra
 // 4. elem1 < elem3 < elem2 --> sa + ra
 // 5. elem3 < elem1 < elem2 --> rra
-void	algo_3(t_list *a)
+void	algo_3(t_list **stack_a)
 {
-	int	*elm1;
-	int	*elm2;
-	int	*elm3;
+	int	elem1;
+	int	elem2;
+	int	elem3;
 
-	elm1 = a->content;
-	elm2 = a->next->content;
-	elm3 = a->next->next->content;
-	if (*elm2 < *elm1 && *elm1 < *elm3)
-		sa(&a);
-	else if (*elm3 < *elm2 && *elm2 < *elm1)
+	elem1 = *(int *)(*stack_a)->content;
+	elem2 = *(int *)(*stack_a)->next->content;
+	elem3 = *(int *)(*stack_a)->next->next->content;
+	if (elem2 < elem1 && elem1 < elem3)
+		sa(&*stack_a);
+	else if (elem3 < elem2 && elem2 < elem1)
 	{
-		sa(&a);
-		rra(&a);
+		sa(&*stack_a);
+		rra(&*stack_a);
 	}
-	else if (*elm2 < *elm3 && *elm3 < *elm1)
-		ra(&a);
-	else if (*elm1 < *elm3 && *elm3 < *elm2)
+	else if (elem2 < elem3 && elem3 < elem1)
+		ra(&*stack_a);
+	else if (elem1 < elem3 && elem3 < elem2)
 	{
-		sa(&a);
-		ra(&a);
+		sa(&*stack_a);
+		ra(&*stack_a);
 	}
-	else if (*elm3 < *elm1 && *elm1 < *elm2)
-		rra(&a);
+	else if (elem3 < elem1 && elem1 < elem2)
+		rra(&*stack_a);
 }
