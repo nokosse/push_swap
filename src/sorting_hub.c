@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:26 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:06:37 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:35:53 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 // elements in stack_a.
 void	sorting_hub(t_list *stack_a, t_list *stack_b, int params)
 {
+	(void)(stack_b); //atm
 	if (params == 2)
 		algo_2(stack_a);
 	else if (params == 3)
-		algo_3(stack_a, stack_b);
-	else if (params == 4)
-		algo_4(stack_a, stack_b);
-	else if (params == 5)
-		algo_5(stack_a, stack_b);
+		algo_3(stack_a);
+	// else if (params == 4)
+	// 	algo_4(stack_a, stack_b);
+	// else if (params == 5)
+	// 	algo_5(stack_a, stack_b);
 }
