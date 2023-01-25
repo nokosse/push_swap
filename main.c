@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:01:28 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:11:35 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,21 @@ void	ft_print_lst(t_list *stack_a)
 	}
 }
 
+int	*nb_init(int ac, char **av, int *numbers)
+{
+	if (ac == 2)
+		numbers = str_to_int_array(av[1]);
+	else if (ac > 2)
+		numbers = av_to_int_array(ac, av);
+	return (numbers);
+}
+
+// Main function of push_swap.
+// 1. Check if arguments are valid.
+// 2. Initialize array of integers.
+// 3. Initialize stack_a with the array of integers.
+// 4. Check if stack_a is sorted.
+// 5. If stack_a is not sorted, call sorting_hub.
 int	main(int ac, char **av)
 {
 	int	*numbers;
@@ -34,10 +49,7 @@ int	main(int ac, char **av)
 		return (0);
 	else if (check_args(ac, av) == 0)
 		return (ft_printf("Error\n"), exit(1), 0);
-	if (ac == 2)
-		numbers = str_to_int_array(av[1]);
-	else if (ac > 2)
-		numbers = av_to_int_array(ac, av);
+	numbers = nb_init(ac, av, numbers);
 	stack_init(numbers, &stack_a);
 	if (is_stack_a_sorted(stack_a, stack_b) == 0)
 		sorting_hub(&stack_a, &stack_b, ac - 1);
