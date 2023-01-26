@@ -6,13 +6,13 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 17:15:23 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/26 17:00:33 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-//Function that checks if the array is only numbers
+//Function that checks if the argument is a number
 int	is_number(char *str)
 {
 	int	i;
@@ -20,9 +20,12 @@ int	is_number(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (ft_isdigit(str[i]) == 0)
+		if (str[0] == '-' && ft_isdigit(str[i + 1]) == 1)
+			i++;
+		else if (ft_isdigit(str[i]) == 1)
+			i++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
@@ -35,9 +38,14 @@ int	is_array_numeric(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (ft_isdigit(str[i]) == 0 && str[i] != ' ')
+		if (str[i] == '-' && ft_isdigit(str[i + 1]) == 1)
+			i++;
+		else if (ft_isdigit(str[i]) == 1)
+			i++;
+		else if (str[i] == ' ')
+			i++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
