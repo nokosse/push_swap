@@ -6,84 +6,75 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/18 17:40:33 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/26 19:22:28 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-//Function that takes an array of numbers and checks if there are duplicates
-int	dupe_check_args(char **av)
+// Count the number of digits in *str.
+int	count_digits_in_str(char *str)
 {
 	int	i;
-	int	j;
+	int	count;
 
 	i = 0;
-	while (av[i])
+	count = 0;
+	while (str[i])
+	{
+		while(str[i] == ' ' || str[i] == '-')
+			i++;
+		if (str[i])
+			count++;
+		while (ft_isdigit(str[i]) == 1)
+			i++;
+	}
+	return (count);
+}
+
+// Check if *int array contains duplicates.
+int	found_duplicates(long int *array, long int size)
+{
+	long int	i;
+	long int	j;
+
+	i = 0;
+	while (i < size)
 	{
 		j = i + 1;
-		while (av[j])
+		while (j < size)
 		{
-			if (ft_atoi(av[i]) == ft_atoi(av[j]))
-				return (0);
+			if (array[i] == array[j])
+				return (1);
 			j++;
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
-//Function that takes a *str of numbers and checks if there are duplicates
-int	dupe_check_str(char *str)
+// Check if *int array contains a number bigger than INT_MAX.
+int	found_intmax(long int *array, long int size)
 {
-	int		i;
-	int		j;
-	char	**av;
+	long int	i;
 
-	av = ft_split(str, ' ');
 	i = 0;
-	while (av[i])
+	while (i < size)
 	{
-		j = i + 1;
-		while (av[j])
-		{
-			if (ft_atoi(av[i]) == ft_atoi(av[j]))
-				return (0);
-			j++;
-		}
+		if (array[i] > INT_MAX)
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
-//Function that checks if there is a number > intmax in the array of numbers
-int	is_number_bigger_than_max_int(char **av)
+long int	arraylen(int ac, char **av)
 {
-	int	i;
+	long int	len;
 
-	i = 0;
-	while (av[i])
-	{
-		if (ft_atol(av[i]) > 2147483647)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-//Function that check if there is a number > intmax in the *str of numbers
-int	is_number_bigger_than_max_int_str(char *str)
-{
-	int		i;
-	char	**av;
-
-	av = ft_split(str, ' ');
-	i = 0;
-	while (av[i])
-	{
-		if (ft_atol(av[i]) > 2147483647)
-			return (0);
-		i++;
-	}
-	return (1);
+	if (ac == 2)
+		len = count_digits_in_str(av[1]);
+	else
+		len = ac - 1;
+	return (len);
 }

@@ -6,74 +6,121 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 17:05:10 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/26 19:50:13 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-//Function that checks if the array is only numbers
-int	is_number(char *str)
+// Check if *str only contains digit, negative digits and spaces.
+int	is_str_numeric(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (ft_isdigit(str[i]) == 0)
+		if (str[i] == '-' && ft_isdigit(str[i + 1]))
+			i++;
+		else if (ft_isdigit(str[i]) == 1)
+			i++;
+		else if (str[i] == ' ')
+			i++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
 
-//Function that checks if the array contains only numbers and spaces
-int	is_array_numeric(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (ft_isdigit(str[i]) == 0 && str[i] != ' ')
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-//Function that checks if all the arguments are only numbers
-int	are_args_numeric(int ac, char **av)
+// Same as is_str_numeric but for multiple arguments instead of one *str
+int	is_arg_numeric(int ac, char **av)
 {
 	int	i;
 
 	i = 1;
 	while (i < ac)
 	{
-		if (is_number(av[i]) == 0)
+		if (is_str_numeric(av[i]) == 0)
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
-//Checks if the arguments are valid. Will be used in main
+// Convert *str to *long int array.
+// Use ft_split to split *str into **str array.
+// Then convert each **str to int and put it in *long int array.
+long int	*numeric_str_to_int_array(char *str)
+{
+	char		**str_array;
+	long int	*num_array;
+	long int	i;
+
+	i = 0;
+	str_array = ft_split(str, ' ');
+	num_array = malloc(sizeof(long int) * count_digits_in_str(str));
+	if (!num_array)
+		return (NULL);
+	while (str_array[i])
+	{
+		num_array[i] = ft_atoi(str_array[i]);
+		i++;
+	}
+	//free all the **str_array
+	i = 0;
+	while (str_array[i])
+	{
+		free(str_array[i]);
+		i++;
+	}
+	free(str_array);
+	return (num_array);
+}
+
+// Put all the **av into a *long int array.
+long int	*av_to_int_array(int ac, char **av)
+{
+	long int	*num_array;
+	int		i;
+
+	i = 1;
+	num_array = malloc(sizeof(long int) * (ac - 1));
+	if (!num_array)
+		return (NULL);
+	while (i < ac)
+	{
+		num_array[i - 1] = ft_atoi(av[i]);
+		i++;
+	}
+	return (num_array);
+}
+
 int	check_args(int ac, char **av)
 {
-	if (ac == 2 && is_array_numeric(av[1]) == 1)
+	long int	*num_array;
+	long int	len;
+	int			is_all_good;
+
+	len = arraylen(ac, av);
+	if (ac == 2 && is_str_numeric(av[1]) == 1)
 	{
-		if (dupe_check_str(av[1]) == 1)
-		{
-			if (is_number_bigger_than_max_int_str(av[1]) == 1)
-				return (1);
-		}
+		num_array = numeric_str_to_int_array(av[1]);
+		is_all_good = 1;
 	}
-	else if (ac > 2 && are_args_numeric(ac, av) == 1)
+	else if (ac > 2 && is_arg_numeric(ac, av) == 1)
 	{
-		if (dupe_check_args(av) == 1)
+		num_array = av_to_int_array(ac, av);
+		is_all_good = 1;
+	}
+	if (is_all_good == 1)
+	{
+		if (found_duplicates(num_array, len) == 0)
 		{
-			if (is_number_bigger_than_max_int(av) == 1)
+			if (found_intmax(num_array, len) == 0)
+			{
+				free(num_array);
 				return (1);
+			}
 		}
 	}
 	return (0);
