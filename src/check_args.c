@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 17:04:51 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/26 17:05:10 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	is_number(char *str)
 			return (0);
 		i++;
 	}
-	return (1);zz
+	return (1);
 }
 
 //Function that checks if the array contains only numbers and spaces
