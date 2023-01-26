@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 19:29:17 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/26 15:33:11 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
 # include <stdio.h>
 # include <string.h>
 # include <stdint.h>
@@ -27,10 +25,10 @@
 
 typedef struct s_stack
 {
-	int				*content;
+	long int		*content;
 	int				index;
-	struct s_stack  *next;
-}   t_stack;
+	struct s_stack	*next;
+}	t_stack;
 
 //Extra
 void	ft_print_lst(t_list *lst);

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 19:12:39 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/26 15:32:25 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,7 @@ int	main(int ac, char **av)
 	stack_init(nb_init(ac, av), &stack_a);
 	if (is_stack_a_sorted(stack_a, stack_b) == 0)
 		sorting_hub(&stack_a, &stack_b, ac - 1);
-
-	// Test purpose
-	ft_printf("\nstack_a : ");
-	ft_print_lst(stack_a);
+	return (0);
 }
 
 //TODO : Edit all the code to use the new structure t_stack
