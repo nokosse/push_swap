@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 19:22:28 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 13:51:14 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	count_digits_in_str(char *str)
 	count = 0;
 	while (str[i])
 	{
-		while(str[i] == ' ' || str[i] == '-')
+		while (str[i] == ' ' || str[i] == '-')
 			i++;
 		if (str[i])
 			count++;

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:16:17 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:37:46 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:07:00 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 //---|---      ---|---
 // A | B        A | B
 
-void	pb(t_list **stack_a, t_list **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_list	*tmp;
+	t_stack	*tmp;
 
 	if (*stack_a)
 	{

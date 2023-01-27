@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:13:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 18:56:51 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:06:39 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@
 // elem1 --> elem2.
 // after sa :
 // elem2 --> elem1.
-void	sa(t_list **stack_a)
+void	sa(t_stack **stack_a)
 {
-	t_list	*tmp;
+	t_stack	*tmp;
 
 	if (*stack_a && (*stack_a)->next)
 	{

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 19:50:13 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:04:39 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ long int	*numeric_str_to_int_array(char *str)
 		num_array[i] = ft_atoi(str_array[i]);
 		i++;
 	}
-	//free all the **str_array
 	i = 0;
 	while (str_array[i])
 	{
@@ -81,7 +80,7 @@ long int	*numeric_str_to_int_array(char *str)
 long int	*av_to_int_array(int ac, char **av)
 {
 	long int	*num_array;
-	int		i;
+	int			i;
 
 	i = 1;
 	num_array = malloc(sizeof(long int) * (ac - 1));
@@ -117,11 +116,8 @@ int	check_args(int ac, char **av)
 		if (found_duplicates(num_array, len) == 0)
 		{
 			if (found_intmax(num_array, len) == 0)
-			{
-				free(num_array);
-				return (1);
-			}
+				return (free(num_array), 1);
 		}
 	}
-	return (0);
+	return (free(num_array), 0);
 }

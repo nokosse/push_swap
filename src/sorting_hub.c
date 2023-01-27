@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:26 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 15:39:24 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:08:54 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 //
 // This function will call the sorting algorithm depending on the number of
 // elements in stack_a.
-void	sorting_hub(t_list **stack_a, t_list **stack_b, int params)
+void	sorting_hub(t_stack **stack_a, t_stack **stack_b, int params)
 {
 	if (params == 2)
 		algo_2(stack_a);

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:44:12 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/25 15:40:03 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:06:43 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 //---|---      ---|---
 // A | B        A | B
 
-void	rra(t_list **stack_a)
+void	rra(t_stack **stack_a)
 {
-	t_list	*tmp;
-	t_list	*tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	if (*stack_a && (*stack_a)->next)
 	{

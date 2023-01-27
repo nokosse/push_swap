@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:13:45 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 13:52:58 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:13:22 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,28 @@
 // 6. Just do pa to put the elements back to stack_a
 // 10 operations should be the maximum to sort a list of 5 elements. (2 5 1 4 3)
 
-int	find_smallest(t_list *a)
+int	find_smallest(t_stack *a)
 {
-	int	smallest;
+	long int	smallest;
 
-	smallest = *(int *)a->content;
+	smallest = a->content;
 	while (a != NULL)
 	{
-		if (*(int *)a->content < smallest)
-			smallest = *(int *)a->content;
+		if (a->content < smallest)
+			smallest = a->content;
 		a = a->next;
 	}
 	return (smallest);
 }
 
-void	algo_4(t_list **a, t_list **b)
+void	algo_4(t_stack **a, t_stack **b)
 {
-	int	smallest;
+	long int	smallest;
 
 	smallest = find_smallest(*a);
-	if (*(int *)(*a)->next->next->next->content == smallest)
+	if ((*a)->next->next->next->content == smallest)
 		rra(&*a);
-	while (*(int *)(*a)->content != smallest)
+	while ((*a)->content != smallest)
 		ra(&*a);
 	pb(&*a, &*b);
 	if (is_stack_a_sorted_no_b(*a) == 0)
@@ -50,25 +50,25 @@ void	algo_4(t_list **a, t_list **b)
 	pa(&*a, &*b);
 }
 
-void	algo_5(t_list **a, t_list **b)
+void	algo_5(t_stack **a, t_stack **b)
 {
-	int	smallest;
+	long int	smallest;
 
 	smallest = find_smallest(*a);
-	if (*(int *)(*a)->next->next->next->next->content == smallest)
+	if ((*a)->next->next->next->next->content == smallest)
 		rra(&*a);
-	else if (*(int *)(*a)->next->next->next->content == smallest)
+	else if ((*a)->next->next->next->content == smallest)
 	{
 		rra(&*a);
 		rra(&*a);
 	}
-	while (*(int *)(*a)->content != smallest)
+	while ((*a)->content != smallest)
 		ra(&*a);
 	pb(&*a, &*b);
 	smallest = find_smallest(*a);
-	if (*(int *)(*a)->next->next->next->content == smallest)
+	if ((*a)->next->next->next->content == smallest)
 		rra(&*a);
-	while (*(int *)(*a)->content != smallest)
+	while ((*a)->content != smallest)
 		ra(&*a);
 	pb(&*a, &*b);
 	if (is_stack_a_sorted_no_b(*a) == 0)
