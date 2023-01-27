@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/26 15:33:11 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:23:55 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,53 +20,56 @@
 # include <string.h>
 # include <stdint.h>
 # include <fcntl.h>
+# include <limits.h>
 # include "../libft/inc/libft.h"
 # include "../libft/inc/ft_printf.h"
 
 typedef struct s_stack
 {
-	long int		*content;
+	int				content;
 	int				index;
 	struct s_stack	*next;
 }	t_stack;
 
+// Linked list s_stack
+void		ft_stkadd_back(t_stack **stack, t_stack *new);
+t_stack		*ft_stknew(int content);
+void		ft_stkclear(t_stack **stack);
+
 //Extra
-void	ft_print_lst(t_list *lst);
+void		ft_print_lst(t_stack *lst);
 
 // Arguments validity check
-int		dupe_check_args(char **av);
-int		dupe_check_str(char *str);
-int		is_number(char *str);
-int		is_array_numeric(char *str);
-int		are_args_numeric(int ac, char **av);
-int		check_args(int ac, char **av);
-int		is_number_bigger_than_max_int(char **av);
-int		is_number_bigger_than_max_int_str(char *str);
+int			count_digits_in_str(char *str);
+int			check_args(int ac, char **av);
+int			found_duplicates(long int *array, long int size);
+int			found_intmax(long int *array, long int size);
+long int	arraylen(int ac, char **av);
+long int	*numeric_str_to_int_array(char *str);
+long int	*av_to_int_array(int ac, char **av);
 
-// Put args in list
-int		ft_intlen(int *numbers);
-int		*str_to_int_array(char *str);
-int		*av_to_int_array(int ac, char **av);
-void	stack_init(int *numbers, t_list **stack_a);
+// Stack creation
+long int	*init_array(int ac, char **av);
+void		init_stack(long int *array, t_stack **stack, int ac, char **av);
 
 // Sorting instructions
-void	pa(t_list **stack_a, t_list **stack_b);
-void	pb(t_list **stack_a, t_list **stack_b);
-void	ra(t_list **stack_a);
-void	rb(t_list **stack_b);
-void	rr(t_list **stack_a, t_list **stack_b);
-void	sa(t_list **stack_a);
-void	sb(t_list **stack_b);
-void	ss(t_list **stack_a, t_list **stack_b);
-void	rra(t_list **stack_a);
+void		pa(t_stack **stack_a, t_stack **stack_b);
+void		pb(t_stack **stack_a, t_stack **stack_b);
+void		ra(t_stack **stack_a);
+void		rb(t_stack **stack_b);
+void		rr(t_stack **stack_a, t_stack **stack_b);
+void		sa(t_stack **stack_a);
+void		sb(t_stack **stack_b);
+void		ss(t_stack **stack_a, t_stack **stack_b);
+void		rra(t_stack **stack_a);
 
 // Sorting algorithms & verification
-void	sorting_hub(t_list **stack_a, t_list **stack_b, int params);
-int		is_stack_a_sorted(t_list *stack_a, t_list *stack_b);
-int		is_stack_a_sorted_no_b(t_list *stack_a);
-void	algo_2(t_list **stack_a);
-void	algo_3(t_list **stack_a);
-void	algo_4(t_list **stack_a, t_list **stack_b);
-void	algo_5(t_list **stack_a, t_list **stack_b);
+void		sorting_hub(t_stack **stack_a, t_stack **stack_b, int params);
+int			is_stack_a_sorted(t_stack *stack_a, t_stack *stack_b);
+int			is_stack_a_sorted_no_b(t_stack *stack_a);
+void		algo_2(t_stack **stack_a);
+void		algo_3(t_stack **stack_a);
+void		algo_4(t_stack **stack_a, t_stack **stack_b);
+void		algo_5(t_stack **stack_a, t_stack **stack_b);
 
 #endif
