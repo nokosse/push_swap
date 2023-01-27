@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 13:51:14 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:46:12 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int	found_intmax(long int *array, long int size)
 	return (0);
 }
 
+// Returns the length of the *int array.
 long int	arraylen(int ac, char **av)
 {
 	long int	len;

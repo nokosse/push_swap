@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 17:40:03 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:23:41 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:45:10 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,9 @@ long int	*init_array(int ac, char **av)
 	return (array);
 }
 
-// Function init_stack will create a *t_stack struct from *int array.
-// typedef struct s_stack
-// {
-// 	int				*content;
-// 	int				index;
-// 	struct s_stack	*next;
-// }	t_stack;
-//
-// each content in t_stack is a int in *int array.
-// Index is null in init_stack and will be altered in sorts algorithms.
-// next is the next t_stack in the stack.
+// Function init_stack will create a stack from a *int array.
+// Each element of the array will be added to the stack.
+// The array will be freed after.
 void	init_stack(long int *array, t_stack **stack, int ac, char **av)
 {
 	int	i;

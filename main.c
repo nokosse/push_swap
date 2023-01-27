@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:22:56 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:42:26 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,4 @@ int	main(int ac, char **av)
 	(void)stack_b;
 }
 
-//TODO : Edit all the code to use the new structure t_stack instead of t_list
+// Todo : algo_100 and algo_500

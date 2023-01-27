@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:04:39 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:46:30 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ long int	*av_to_int_array(int ac, char **av)
 	return (num_array);
 }
 
+// Returns 1 if arguments are valid, 0 if not.
 int	check_args(int ac, char **av)
 {
 	long int	*num_array;
