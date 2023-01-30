@@ -6,21 +6,11 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/30 17:44:06 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:56:33 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/push_swap.h"
-
-// Function ft_print_stack print the stack in parameter.
-void	ft_print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->content);
-		stack = stack->next;
-	}
-}
 
 int	main(int ac, char **av)
 {

@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 13:29:13 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:18:39 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:48:44 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ t_stack	*ft_stknew(int content)
 	if (!new)
 		return (NULL);
 	new->content = content;
+	new->index = 0;
 	new->next = NULL;
 	return (new);
 }
