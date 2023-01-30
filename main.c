@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 16:04:25 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/30 17:44:06 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 		return (ft_printf("Error\n"), exit(1), 0);
 	init_stack(init_array(ac, av), &stack_a, ac, av);
 	if (is_stack_a_sorted(stack_a, stack_b) == 0)
-		sorting_hub(&stack_a, &stack_b, ac - 1);
+		sorting_hub(&stack_a, &stack_b, (int)arraylen(ac, av));
 	ft_stkclear(&stack_a);
 	(void)stack_a;
 	(void)stack_b;
