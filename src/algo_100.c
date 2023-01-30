@@ -6,26 +6,11 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:05:40 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/30 19:00:22 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:03:01 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-// typedef struct s_stack
-// {
-// 	int				content;
-// 	int				index;
-// 	struct s_stack	*next;
-// }	t_stack;
-//
-// Our stack contains more than 5 numbers in content.
-// We need to simplify these numbers in case there is negatives.
-// Our list being : -10 42 1 20 -5 7
-// Will become    :  1 6 3 4 2 5
-// (from 1 to size)
-// These values are stored in index.
-// We will sort the stack using index instead of content.
 
 // lst_to_int_arr will convert our list to an array of int.
 // To make simplify_stack shorter.
@@ -50,15 +35,17 @@ int	*lst_to_int_arr(t_stack *stack, int size)
 }
 
 // Simplify_stack will simplify the stack.
+// Makes : -42 20 19 2 -10 -1
+// To    : 0 5 4 3 1 2
 void	simplify_stack(t_stack *stack, int size)
 {
 	int		i;
 	int		j;
 	int		*tab;
 
+	i = 0;
 	j = 0;
 	tab = lst_to_int_arr(stack, size);
-	i = 0;
 	while (i < size)
 	{
 		j = 0;

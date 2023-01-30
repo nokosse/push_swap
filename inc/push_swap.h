@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/30 18:59:29 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:03:27 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ t_stack		*ft_stknew(int content);
 void		ft_stkclear(t_stack **stack);
 
 // Print stacks
-void	ft_print_both_lst(t_stack *stack);
-void	ft_print_index(t_stack *stack);
-void	ft_print_content(t_stack *stack);
+void		ft_print_both_lst(t_stack *stack);
+void		ft_print_index(t_stack *stack);
+void		ft_print_content(t_stack *stack);
 
 // Arguments validity check
 int			count_digits_in_str(char *str);
