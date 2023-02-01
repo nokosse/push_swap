@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 19:40:18 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/01 23:39:24 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ long int	*numeric_str_to_int_array(char *str)
 		return (NULL);
 	while (str_array[i])
 	{
-		num_array[i] = ft_atoi(str_array[i]);
+		num_array[i] = ft_atol(str_array[i]);
 		i++;
 	}
 	i = 0;
@@ -88,7 +88,7 @@ long int	*av_to_int_array(int ac, char **av)
 		return (NULL);
 	while (i < ac)
 	{
-		num_array[i - 1] = ft_atoi(av[i]);
+		num_array[i - 1] = ft_atol(av[i]);
 		i++;
 	}
 	return (num_array);
