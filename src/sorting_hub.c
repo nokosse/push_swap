@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:26 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 12:44:31 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:03:37 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 // elements in stack_a.
 void	sorting_hub(t_stack **a, t_stack **b, int size)
 {
-	ft_printf("size = %d\n", size);
 	if (size == 2)
 		algo_2(a);
 	else if (size == 3)
@@ -28,11 +27,9 @@ void	sorting_hub(t_stack **a, t_stack **b, int size)
 		algo_4(a, b);
 	else if (size == 5)
 		algo_5(a, b);
-	else if (size > 5 && size <= 100)
+	else if (size > 5 && size <= 500)
 	{
 		simplify_stack(*a, size);
 		algo_100(a, b, size);
 	}
-	// else if (size > 100)
-	// 	algo_500(a, b, size);
 }
