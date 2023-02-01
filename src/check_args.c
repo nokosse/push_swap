@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:46:30 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:40:18 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ long int	*numeric_str_to_int_array(char *str)
 	return (num_array);
 }
 
-// Put all the **av into a *long int array.
+// convert **av into a *long int array.
 long int	*av_to_int_array(int ac, char **av)
 {
 	long int	*num_array;
@@ -95,6 +95,7 @@ long int	*av_to_int_array(int ac, char **av)
 }
 
 // Returns 1 if arguments are valid, 0 if not.
+// Calls all the functions to check if arguments are valid.
 int	check_args(int ac, char **av)
 {
 	long int	*num_array;

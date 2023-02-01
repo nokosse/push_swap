@@ -6,18 +6,13 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 13:29:13 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/30 18:48:44 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:41:04 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// Reproduces ft_lstadd_back from libft but with the new structure :
-// typedef struct s_stack
-// {
-// 	int				content;
-// 	struct s_stack	*next;
-// }	t_stack;
+// Reproduces ft_lstadd_back from libft but with the new structure (t_stack)
 
 void	ft_stkadd_back(t_stack **stack, t_stack *new)
 {
@@ -34,7 +29,7 @@ void	ft_stkadd_back(t_stack **stack, t_stack *new)
 	current->next = new;
 }
 
-// Reproduces ft_lstnew from libft but with the new structure :
+// Reproduces ft_lstnew from libft but with the new structure (t_stack)
 t_stack	*ft_stknew(int content)
 {
 	t_stack	*new;
@@ -48,7 +43,7 @@ t_stack	*ft_stknew(int content)
 	return (new);
 }
 
-// Reproduces ft_lstlast from libft but with the new structure :
+// Reproduces ft_lstlast from libft but with the new structure (t_stack)
 // It frees all the elements of the stack: content and index
 void	ft_stkclear(t_stack **stack)
 {

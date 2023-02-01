@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:16:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:06:57 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:43:12 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	ra(t_stack **stack_a)
 		tmp2->next = tmp;
 		tmp->next = NULL;
 	}
-	ft_printf("ra\n");
+	write(1, "ra\n", 3);
 }

@@ -6,18 +6,11 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:05:40 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 19:25:57 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/01 19:34:49 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-// typedef struct s_stack
-// {
-// 	int				content;
-// 	int				index;
-// 	struct s_stack	*next;
-// }	t_stack;
 
 // This function will return the max number of bits of the biggest number in
 // stack_a.
