@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 23:39:24 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 13:32:28 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	is_str_numeric(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == '-' && ft_isdigit(str[i + 1]))
+		if (str[i] == '-' && ft_isdigit(str[i + 1]) == 1
+			&& ft_isdigit(str[i - 1]) == 0)
 			i++;
 		else if (ft_isdigit(str[i]) == 1)
 			i++;
