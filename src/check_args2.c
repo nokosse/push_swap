@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/02 13:38:00 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 13:57:05 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ int	found_intmax(long int *array, long int size)
 	while (i < size)
 	{
 		if (array[i] > INT_MAX)
+			return (1);
+		else if (array[i] < INT_MIN)
 			return (1);
 		i++;
 	}
