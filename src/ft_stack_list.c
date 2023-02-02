@@ -6,14 +6,13 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 13:29:13 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 19:41:04 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:41:30 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
 // Reproduces ft_lstadd_back from libft but with the new structure (t_stack)
-
 void	ft_stkadd_back(t_stack **stack, t_stack *new)
 {
 	t_stack	*current;
@@ -59,5 +58,3 @@ void	ft_stkclear(t_stack **stack)
 	}
 	*stack = NULL;
 }
-
-// Can add lst functions if needed.	

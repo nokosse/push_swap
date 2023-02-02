@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:00:26 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 19:38:35 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:33:36 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	sorting_hub(t_stack **a, t_stack **b, int size)
 	else if (size > 5 && size <= 500)
 	{
 		simplify_stack(*a, size);
-		algo_100(a, b, size);
+		algo_radix(a, b, size);
 	}
 }

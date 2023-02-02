@@ -6,14 +6,14 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:05:40 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 19:34:49 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:37:38 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// This function will return the max number of bits of the biggest number in
-// stack_a.
+// This function will return the max number of bits needed to sort the list.
+// Because the list is simplified we can do this.
 // If the the list is of size 6 to 7, the max number of bits will be 3.
 // If the the list is of size 8 to 15, the max number of bits will be 4.
 // If it's 16 to 31, the max number of bits will be 5.
@@ -42,9 +42,8 @@ int	get_max_bits(int size)
 	return (max_bits);
 }
 
-// Radix sort algorithm
-// 
-void	algo_100(t_stack **a, t_stack **b, int size)
+// Radix sort algorithm for more than 5 elements.
+void	algo_radix(t_stack **a, t_stack **b, int size)
 {
 	t_stack	*tmp;
 	int		max_bits;

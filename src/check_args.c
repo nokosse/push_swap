@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/02 13:35:12 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:39:37 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	is_str_numeric(char *str)
 	return (1);
 }
 
-// Same as is_str_numeric but for multiple arguments instead of one *str
+// Same as is_str_numeric but check each arguments instead of one *str
 int	is_arg_numeric(int ac, char **av)
 {
 	int	i;
@@ -51,6 +51,7 @@ int	is_arg_numeric(int ac, char **av)
 // Convert *str to *long int array.
 // Use ft_split to split *str into **str array.
 // Then convert each **str to int and put it in *long int array.
+// We have to free the whole str_array to avoir leaks.
 long int	*numeric_str_to_int_array(char *str)
 {
 	char		**str_array;
@@ -78,6 +79,7 @@ long int	*numeric_str_to_int_array(char *str)
 }
 
 // convert **av into a *long int array.
+// We use atol to be able to check if the number is bigger than MAX_INT later.
 long int	*av_to_int_array(int ac, char **av)
 {
 	long int	*num_array;

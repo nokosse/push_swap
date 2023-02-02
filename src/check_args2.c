@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/02 13:57:05 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:40:32 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	count_digits_in_str(char *str)
 	return (count);
 }
 
-// Check if *int array contains duplicates.
+// Check if long int *array contains duplicates.
 int	found_duplicates(long int *array, long int size)
 {
 	long int	i;
@@ -56,6 +56,7 @@ int	found_duplicates(long int *array, long int size)
 }
 
 // Check if *int array contains a number bigger than INT_MAX.
+// Also check if *int array contains a number smaller than INT_MIN.
 int	found_intmax(long int *array, long int size)
 {
 	long int	i;

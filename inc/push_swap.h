@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/01 19:49:40 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:37:20 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # include "../libft/inc/libft.h"
 # include "../libft/inc/ft_printf.h"
 
+// I could have used t_list from libft.
+// We could use simplify_stack on content instead of index.
 typedef struct s_stack
 {
 	int				content;
@@ -69,6 +71,6 @@ void		algo_2(t_stack **stack_a);
 void		algo_3(t_stack **stack_a);
 void		algo_4(t_stack **stack_a, t_stack **stack_b);
 void		algo_5(t_stack **stack_a, t_stack **stack_b);
-void		algo_100(t_stack **a, t_stack **b, int size);
+void		algo_radix(t_stack **a, t_stack **b, int size);
 
 #endif

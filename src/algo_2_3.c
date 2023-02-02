@@ -6,18 +6,15 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:13:39 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:13:28 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:32:40 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
 // Function algo_2 is called only if stack_a has 2 elements.
-// If elem1 > elem2, swap them.
-// Else, it means it's already sorted.
-//
-// Why the cast ? Because the content of the list is a void pointer.
-// And we need to compare the values of the elements. So we need to cast
+// There is 1 possible case:
+// 1. elem1 > elem2 --> sa
 void	algo_2(t_stack **stack_a)
 {
 	long int	elem1;

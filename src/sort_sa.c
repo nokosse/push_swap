@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:13:53 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/27 15:06:39 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:41:55 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@
 //---|---      ---|---
 // A | B        A | B
 
-// before sa :
-// elem1 --> elem2.
-// after sa :
-// elem2 --> elem1.
 void	sa(t_stack **stack_a)
 {
 	t_stack	*tmp;
