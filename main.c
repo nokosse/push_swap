@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:56:32 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/02 14:17:14 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/02 17:05:03 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,6 @@ int	main(int ac, char **av)
 	ft_stkclear(&stack_a);
 	return (0);
 }
+
+// We write on STDERR_FILENO to write on the standard error output.
+// It's same as write(2, "Error\n", 6); but it's more readable.
