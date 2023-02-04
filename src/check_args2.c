@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 13:02:01 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:30:21 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,33 @@ int	found_duplicates(long int *array, long int size)
 	return (0);
 }
 
+// Check if our array contains a number bigger than ULLONG_MAX.
+// What is does is :
+// Multiply a number of the array by 10.
+// If the result is bigger than the original number, it means that
+// the number is bigger than ULLONG_MAX.
+// Because a number bigger than ULLONG_MAX will be rounded to 0.
+int	found_ullmax(unsigned long long int *array, unsigned long long int size)
+{
+	unsigned long long int	i;
+	unsigned long long int	temp;
+
+	i = 0;
+	while (i < size)
+	{
+		temp = array[i];
+		temp *= 10;
+		if (temp / 10 != array[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 // Check if *int array contains a number bigger than INT_MAX.
 // Also check if *int array contains a number smaller than INT_MIN.
+// To check for ULLONG_MAX, we use found_ullmax, where you have to cast
+// the array to unsigned long long int.
 int	found_intmax(long int *array, long int size)
 {
 	long int	i;
@@ -64,9 +89,9 @@ int	found_intmax(long int *array, long int size)
 	i = 0;
 	while (i < size)
 	{
-		if (array[i] > INT_MAX)
+		if (array[i] > INT_MAX || array[i] < INT_MIN)
 			return (1);
-		else if (array[i] < INT_MIN)
+		else if (found_ullmax((unsigned long long int *)array, size) == 1)
 			return (1);
 		i++;
 	}
