@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 13:00:25 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:09:20 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ int	check_args(int ac, char **av)
 	long int	len;
 	int			is_all_good;
 
+	is_all_good = 0;
 	len = arraylen(ac, av);
 	if (ac == 2 && is_str_numeric(av[1]) == 1)
 	{
@@ -119,13 +120,10 @@ int	check_args(int ac, char **av)
 		num_array = av_to_int_array(ac, av);
 		is_all_good = 1;
 	}
-	if (is_all_good == 1)
-	{
-		if (found_duplicates(num_array, len) == 0)
-		{
-			if (found_intmax(num_array, len) == 0)
-				return (free(num_array), 1);
-		}
-	}
-	return (free(num_array), 0);
+	if (is_all_good && !found_duplicates(num_array, len)
+		&& !found_intmax(num_array, len))
+		return (free(num_array), 1);
+	else
+		free(num_array);
+	return (0);
 }
