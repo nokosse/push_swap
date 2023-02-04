@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/02 16:37:20 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 12:42:56 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,11 @@ long int	*init_array(int ac, char **av);
 void		init_stack(long int *array, t_stack **stack, int ac, char **av);
 
 // Sorting instructions
+void		sa(t_stack **stack_a);
+void		ra(t_stack **stack_a);
+void		rra(t_stack **stack_a);
 void		pa(t_stack **stack_a, t_stack **stack_b);
 void		pb(t_stack **stack_a, t_stack **stack_b);
-void		ra(t_stack **stack_a);
-void		rb(t_stack **stack_b);
-void		rr(t_stack **stack_a, t_stack **stack_b);
-void		sa(t_stack **stack_a);
-void		sb(t_stack **stack_b);
-void		ss(t_stack **stack_a, t_stack **stack_b);
-void		rra(t_stack **stack_a);
 
 // Sorting algorithms & verification
 void		simplify_stack(t_stack *stack, int size);
