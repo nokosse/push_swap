@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 16:09:20 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:41:19 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,3 +127,18 @@ int	check_args(int ac, char **av)
 		free(num_array);
 	return (0);
 }
+
+// At line 123, I made the code shorter.
+// The "more readable" version looked like this:
+//
+// ...
+// if (is_all_good == 1)
+// 	{
+// 		if (found_duplicates(num_array, len) == 0)
+// 		{
+// 			if (found_intmax(num_array, len) == 0)
+// 				return (free(num_array), 1);
+// 		}
+// 		free(num_array);
+// 	}
+// ...
