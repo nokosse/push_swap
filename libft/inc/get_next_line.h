@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 10:43:17 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/13 18:52:58 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 18:56:40 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@
 # endif
 
 char	*get_next_line(int fd);
-char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strjoin_gnl(const char *s1, const char *s2);
 
 #endif
