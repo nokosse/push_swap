@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:05:52 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/13 18:52:32 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 18:09:59 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 	It is used in GNL to concatenate the stash and the buffer.
 */
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin_gnl(const char *s1, const char *s2)
 {
 	char	*str;
 	size_t	size;

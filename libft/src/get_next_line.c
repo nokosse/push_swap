@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 19:26:38 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/01/13 18:52:39 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 18:10:11 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ static char	*stash_checking(int fd, char *stash, char *buff, int readed)
 	if (!stash)
 		stash = ft_substr(buff, 0, ft_strlen(buff));
 	else
-		stash = ft_strjoin(stash, buff);
+		stash = ft_strjoin_gnl(stash, buff);
 	free(buff);
 	if (stash[0] == '\0')
 	{
@@ -155,7 +155,7 @@ char	*get_next_line(int fd)
 		readed = read(fd, buff, BUFFER_SIZE);
 		if (readed == -1)
 			return (free(buff), NULL);
-		stash[fd] = ft_strjoin(stash[fd], buff);
+		stash[fd] = ft_strjoin_gnl(stash[fd], buff);
 		free(buff);
 		line = cases_handing(&stash[fd], readed);
 		if (line)
