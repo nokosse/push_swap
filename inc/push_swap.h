@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 12:42:56 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 12:54:29 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 
 // I could have used t_list from libft.
 // We could use simplify_stack on content instead of index.
+// But this structure is easier to use because our contents are integers.
+// t_list is a void * so we would have to cast it every time we use it.
 typedef struct s_stack
 {
 	int				content;
