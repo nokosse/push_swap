@@ -6,7 +6,7 @@
 #    By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 00:21:21 by kvisouth          #+#    #+#              #
-#    Updated: 2023/01/27 15:34:51 by kvisouth         ###   ########.fr        #
+#    Updated: 2023/02/04 13:03:52 by kvisouth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@
 #Then It's compiling with gcc -Wall -Wextra -Werror, all the files in /obj + libft.a in libft/
 #Into an executable named push_swap thanks to the parameter -o in gcc.
 #Very simply : it's doing 'gcc -Wall -Wextra -Werror -o push_swap <all .o> <libft.a>'
+
+#The annoying things like "\33[31m" are just colors..
 
 NAME = push_swap
 SRCS = $(wildcard src/*.c)
