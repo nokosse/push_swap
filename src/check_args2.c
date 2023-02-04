@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/02 16:40:32 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/04 13:02:01 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ int	found_intmax(long int *array, long int size)
 }
 
 // Returns the length of the *int array.
+// But I realized that we could use ft_lstsize instead of this function.
+// But whatever.
 long int	arraylen(int ac, char **av)
 {
 	long int	len;
