@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 12:54:29 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:18:26 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int			count_digits_in_str(char *str);
 int			check_args(int ac, char **av);
 int			found_duplicates(long int *array, long int size);
 int			found_intmax(long int *array, long int size);
+int			found_ullmax(char **av);
 long int	arraylen(int ac, char **av);
 long int	*numeric_str_to_int_array(char *str);
 long int	*av_to_int_array(int ac, char **av);

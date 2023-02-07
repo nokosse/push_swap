@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:27:23 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 19:01:21 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:21:44 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,8 @@ int	check_args(int ac, char **av)
 
 	len = arraylen(ac, av);
 	num_array = NULL;
+	if (found_ullmax(av) == 1)
+		return (0);
 	if (ac == 2 && is_str_numeric(av[1]) == 1)
 		num_array = numeric_str_to_int_array(av[1]);
 	else if (ac > 2 && is_arg_numeric(ac, av) == 1)

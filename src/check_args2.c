@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/07 11:55:44 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:22:51 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,23 +55,24 @@ int	found_duplicates(long int *array, long int size)
 	return (0);
 }
 
-// Check if our array contains a number bigger than ULLONG_MAX.
-// What is does is :
-// Multiply a number of the array by 10.
-// If the result is bigger than the original number, it means that
-// the number is bigger than ULLONG_MAX.
-// Because a number bigger than ULLONG_MAX will be rounded to 0.
-int	found_ullmax(unsigned long long int *array, unsigned long long int size)
+// Check if unsigned long long int number is bigger than ULLONG_MAX.
+// I threw up so what It will do : it will check if there is a number
+// and check if that number is bigger than 10 digits.
+// for all the **av.
+int	found_ullmax(char **av)
 {
-	unsigned long long int	i;
-	unsigned long long int	temp;
+	int	i;
+	int	j;
 
-	i = 0;
-	while (i < size)
+	i = 1;
+	while (av[i])
 	{
-		temp = array[i];
-		temp *= 10;
-		if (temp / 10 != array[i])
+		j = 0;
+		while (av[i][j] == ' ')
+			j++;
+		if (av[i][j] == '-')
+			j++;
+		if (ft_strlen(av[i]) - j > 10)
 			return (1);
 		i++;
 	}
@@ -95,11 +96,6 @@ int	found_intmax(long int *array, long int size)
 	}
 	return (0);
 }
-// Removed line 
-// else if (found_ullmax((unsigned long long int *)array, size) == 1)
-// 			return (1);
-//
-// Because ULLONG_MAX checking is breaking the code (with negatives values).
 
 // Returns the length of the *int array.
 // But I realized that we could use ft_lstsize instead of this function.
