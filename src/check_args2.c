@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/07 15:22:51 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:42:26 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,30 +50,6 @@ int	found_duplicates(long int *array, long int size)
 				return (1);
 			j++;
 		}
-		i++;
-	}
-	return (0);
-}
-
-// Check if unsigned long long int number is bigger than ULLONG_MAX.
-// I threw up so what It will do : it will check if there is a number
-// and check if that number is bigger than 10 digits.
-// for all the **av.
-int	found_ullmax(char **av)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (av[i])
-	{
-		j = 0;
-		while (av[i][j] == ' ')
-			j++;
-		if (av[i][j] == '-')
-			j++;
-		if (ft_strlen(av[i]) - j > 10)
-			return (1);
 		i++;
 	}
 	return (0);

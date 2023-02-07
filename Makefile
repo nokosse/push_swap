@@ -6,7 +6,7 @@
 #    By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 00:21:21 by kvisouth          #+#    #+#              #
-#    Updated: 2023/02/07 11:54:19 by kvisouth         ###   ########.fr        #
+#    Updated: 2023/02/07 15:44:48 by kvisouth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS = src/algo_2_3.c \
 		src/algo_radix.c \
 		src/check_args.c \
 		src/check_args2.c \
+		src/check_args3.c \
 		src/check_sort.c \
 		src/ft_stack_list.c \
 		src/sorting_hub.c \

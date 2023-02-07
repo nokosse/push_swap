@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:22 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/07 15:18:26 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:34:31 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ t_stack		*ft_stknew(int content);
 void		ft_stkclear(t_stack **stack);
 
 // Arguments validity check
+int			is_arg_numeric(int ac, char **av);
+int			is_str_numeric(char *str);
 int			count_digits_in_str(char *str);
 int			check_args(int ac, char **av);
 int			found_duplicates(long int *array, long int size);
 int			found_intmax(long int *array, long int size);
-int			found_ullmax(char **av);
+int			found_ullmax(int ac, char **av);
 long int	arraylen(int ac, char **av);
 long int	*numeric_str_to_int_array(char *str);
 long int	*av_to_int_array(int ac, char **av);
