@@ -6,7 +6,7 @@
 /*   By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:33:47 by kvisouth          #+#    #+#             */
-/*   Updated: 2023/02/04 16:30:21 by kvisouth         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:55:44 by kvisouth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,15 @@ int	found_intmax(long int *array, long int size)
 	{
 		if (array[i] > INT_MAX || array[i] < INT_MIN)
 			return (1);
-		else if (found_ullmax((unsigned long long int *)array, size) == 1)
-			return (1);
 		i++;
 	}
 	return (0);
 }
+// Removed line 
+// else if (found_ullmax((unsigned long long int *)array, size) == 1)
+// 			return (1);
+//
+// Because ULLONG_MAX checking is breaking the code (with negatives values).
 
 // Returns the length of the *int array.
 // But I realized that we could use ft_lstsize instead of this function.
