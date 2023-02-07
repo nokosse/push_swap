@@ -6,7 +6,7 @@
 #    By: kvisouth <kvisouth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 00:21:21 by kvisouth          #+#    #+#              #
-#    Updated: 2023/02/04 13:03:52 by kvisouth         ###   ########.fr        #
+#    Updated: 2023/02/07 11:54:19 by kvisouth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,18 @@
 #The annoying things like "\33[31m" are just colors..
 
 NAME = push_swap
-SRCS = $(wildcard src/*.c)
+SRCS = src/algo_2_3.c \
+		src/algo_4_5.c \
+		src/algo_radix.c \
+		src/check_args.c \
+		src/check_args2.c \
+		src/check_sort.c \
+		src/ft_stack_list.c \
+		src/sorting_hub.c \
+		src/sorting_instructions.c \
+		src/stack_init.c \
+		src/stack_simplify.c \
+
 OBJS = $(SRCS:src/%.c=obj/%.o) obj/main.o
 HEADERS = inc/push_swap.h
 LIBFT = libft/libft.a
